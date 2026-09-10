@@ -1,2 +1,2 @@
 # chessboard-joanna-ludwig
-Schackbräde, grupparbete, inlämningsuppgift
+C# console application that renders a chessboard.
