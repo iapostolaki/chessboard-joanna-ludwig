@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Välkommen till vårat schackbräde!");
+            string div = "-----------------------------------";
+
+            Console.WriteLine(div);
+            Console.WriteLine(" Välkommen till vårat Schackbräde!");
+            Console.WriteLine(div);
         }
     }
 }
