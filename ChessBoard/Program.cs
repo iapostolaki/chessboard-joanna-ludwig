@@ -14,19 +14,20 @@
             Console.WriteLine("Bestäm storleken (mellan 3-50) på ditt schackbräde.");
 
             // Sålänge inmatningen är ogiltig, fråga igen. 
+            // Skriv kommentarer på engelska!!
             while (!isInputValid)
             {   
                 Console.Write("Ange ett tal: ");
                 string input = Console.ReadLine();
                 
-                // Kollar så att inmatningen till en siffra
+                // Kollar så att inmatningen är en siffra
                 if (int.TryParse(input, out int size))
                 {
                     // Kollar så att det är inom intervallet
                     if (size >= 3 && size <= 50)
                     {
                         Console.WriteLine("Giltigt!");
-                        // Här måste vi stoppa while-loopen, testa programmet så minns ni :)
+                        isInputValid = true;
                     }
                     else
                     {
@@ -37,9 +38,12 @@
                 {
                     Console.WriteLine("Inmatningen måste vara ett tal.");
                 }
-
             }
+
+            Console.WriteLine("Du kom ur while-loopen! Bravo!");
 
         }
     }
 }
+
+// ◼︎ ◻︎
