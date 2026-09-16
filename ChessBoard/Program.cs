@@ -39,8 +39,8 @@
                 }
             }
 
-            ChessBoard board1 = new ChessBoard(size);
-            board1.RenderBoard();
+            ChessBoard board1 = new ChessBoard();
+            board1.RenderBoard(size);
         }
     }
 }
