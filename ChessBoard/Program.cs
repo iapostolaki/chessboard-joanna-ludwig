@@ -26,7 +26,6 @@
                     // Kollar så att det är inom intervallet
                     if (size >= 3 && size <= 50)
                     {
-                        Console.WriteLine("Giltigt!");
                         isInputValid = true;
                     }
                     else
@@ -39,8 +38,6 @@
                     Console.WriteLine("Inmatningen måste vara ett tal.");
                 }
             }
-
-            Console.WriteLine(size);
 
             // Skriver ut schackbräde
             for (int row = 1; row <= size; row++)
