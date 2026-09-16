@@ -6,6 +6,7 @@
         {
             bool isInputValid = false;
             string div = "-----------------------------------";
+            int size = 0;
 
             Console.WriteLine(div);
             Console.WriteLine(" Välkommen till vårat Schackbräde!");
@@ -18,10 +19,9 @@
             while (!isInputValid)
             {   
                 Console.Write("Ange ett tal: ");
-                string input = Console.ReadLine();
                 
                 // Kollar så att inmatningen är en siffra
-                if (int.TryParse(input, out int size))
+                if (int.TryParse(Console.ReadLine(), out size))
                 {
                     // Kollar så att det är inom intervallet
                     if (size >= 3 && size <= 50)
@@ -40,10 +40,25 @@
                 }
             }
 
-            Console.WriteLine("Du kom ur while-loopen! Bravo!");
+            Console.WriteLine(size);
+
+            // Skriver ut schackbräde
+            for (int row = 1; row <= size; row++)
+            {
+                for (int col = 1; col <= size; col++)
+                {
+                    if ((row + col) % 2 == 0)
+                    {
+                        Console.Write("◻︎ ");
+                    } else
+                    {
+                        Console.Write("◼︎ ");
+                    }
+                }
+
+                Console.WriteLine();
+            }
 
         }
     }
 }
-
-// ◼︎ ◻︎
