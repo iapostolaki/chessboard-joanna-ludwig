@@ -38,24 +38,6 @@
                     Console.WriteLine("Inmatningen måste vara ett tal.");
                 }
             }
-
-            // Skriver ut schackbräde
-            for (int row = 1; row <= size; row++)
-            {
-                for (int col = 1; col <= size; col++)
-                {
-                    if ((row + col) % 2 == 0)
-                    {
-                        Console.Write("◻︎ ");
-                    } else
-                    {
-                        Console.Write("◼︎ ");
-                    }
-                }
-
-                Console.WriteLine();
-            }
-
         }
     }
 }
