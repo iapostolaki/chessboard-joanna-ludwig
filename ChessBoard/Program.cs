@@ -38,6 +38,9 @@
                     Console.WriteLine("Inmatningen måste vara ett tal.");
                 }
             }
+
+            ChessBoard board1 = new ChessBoard(size);
+            board1.RenderBoard();
         }
     }
 }
