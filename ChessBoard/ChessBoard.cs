@@ -10,23 +10,20 @@ namespace ChessBoard
         //properties
         public string WhiteSquare { get; set; }
         public string BlackSquare { get; set; }
-        public int Size { get; set; }
-
 
         //Constructor
-        public ChessBoard(int size)
+        public ChessBoard()
         {
             WhiteSquare = "◼︎ ";
             BlackSquare = "◻︎ ";
-            Size = size;
         }
 
-        public void RenderBoard() 
+        public void RenderBoard(int size) 
         {
             // Skriver ut schackbräde
-            for (int row = 1; row <= Size; row++)
+            for (int row = 1; row <= size; row++)
             {
-                for (int col = 1; col <= Size; col++)
+                for (int col = 1; col <= size; col++)
                 {
                     if ((row + col) % 2 == 0)
                     {
