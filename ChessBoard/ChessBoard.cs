@@ -7,11 +7,11 @@ namespace ChessBoard
 {
     public class ChessBoard
     {
-        //properties
+        // Properties for the black and white 
         public string WhiteSquare { get; set; }
         public string BlackSquare { get; set; }
 
-        //Constructor
+        // Constructor
         public ChessBoard()
         {
             WhiteSquare = "◼︎ ";
@@ -20,11 +20,12 @@ namespace ChessBoard
 
         public void RenderBoard(int size) 
         {
-            // Skriver ut schackbräde
+            // Print the ChessBoard
             for (int row = 1; row <= size; row++)
             {
                 for (int col = 1; col <= size; col++)
                 {
+                    //If the sum of row and column is even, the square is white; otherwise, black.
                     if ((row + col) % 2 == 0)
                     {
                         Console.Write(BlackSquare);
@@ -34,7 +35,7 @@ namespace ChessBoard
                         Console.Write(WhiteSquare);
                     }
                 }
-                // Gör en ny rad
+                // Make a new line
                 Console.WriteLine();
             }
         }

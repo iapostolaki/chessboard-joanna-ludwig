@@ -7,7 +7,7 @@
 
         static void Main(string[] args)
         {
-            // Skriv kommentarer på engelska
+            
             bool isInputValid = false;
 
             WelcomeMessage();
@@ -32,10 +32,10 @@
 
         public static bool GetInput()
         {
-            // Kollar så att inmatningen är en siffra
+            // Verify that the input is valid integer
             if (int.TryParse(Console.ReadLine(), out size))
             {
-                // Kollar så att det är inom intervallet
+                // Verify that the size is within the allowed range
                 if (size >= 3 && size <= 50)
                 {
                     return true;
