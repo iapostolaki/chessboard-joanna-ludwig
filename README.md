@@ -19,7 +19,7 @@ C# console application that renders a chessboard.
 * [Spectre.Console](https://www.nuget.org/packages/spectre.console) (v0.57.2) - Formatted console output in C#
 
 ## Local Setup
-### 1. Copy the repo
+### 1. Copy the URL
 Click `<>Code` on the top right and copy the HTTPS URL
 ```
 https://github.com/iapostolaki/chessboard-joanna-ludwig.git
