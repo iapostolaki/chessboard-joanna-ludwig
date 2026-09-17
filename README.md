@@ -3,8 +3,10 @@
 **Last updated:** `📆 2026-09-17`\
 **Created:** `📆 2026-09-09`\
 **Author:** [`iapostolaki`](https://github.com/iapostolaki) [`etc-ludwig`](https://github.com/etc-ludwig)
+<!-- 
 > [!WARNING]
-> README still under construction!
+> README still under construction! 
+-->
 
 ## About the project
   C# console application that renders a chessboard.
@@ -12,7 +14,7 @@
 ## Dependencies
 This project relies on the following NuGet packages:
 
-* [Spectre.Console](https://github.com/spectreconsole/spectre.console#spectreconsole) (v0.57.2) - Formatted console output in C#
+* [Spectre.Console](https://www.nuget.org/packages/spectre.console) (v0.57.2) - Formatted console output in C#
 
 ## Usage
 When you run the application you will be asked how big you want your chessboard to be (interval 3-50).
