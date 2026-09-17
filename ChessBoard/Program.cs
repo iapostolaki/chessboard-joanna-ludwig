@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+            // Skriv kommentarer på engelska!!
+
             bool isInputValid = false;
             string div = "-----------------------------------";
             int size = 0;
@@ -14,8 +16,8 @@
 
             Console.WriteLine("Bestäm storleken (mellan 3-50) på ditt schackbräde.");
 
-            // Sålänge inmatningen är ogiltig, fråga igen. 
-            // Skriv kommentarer på engelska!!
+            
+            // Sålänge inmatningen är ogiltig, fråga igen
             while (!isInputValid)
             {   
                 Console.Write("Ange ett tal: ");
