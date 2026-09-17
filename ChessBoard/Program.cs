@@ -3,18 +3,14 @@
     class Program
     {
         public static int size = 0;
-        public static bool isInputValid = false;
         public static string div = "-----------------------------------";
 
         static void Main(string[] args)
         {
             // Skriv kommentarer på engelska
+            bool isInputValid = false;
 
-            Console.WriteLine(div);
-            Console.WriteLine(" Välkommen till vårat Schackbräde!");
-            Console.WriteLine(div);
-
-            Console.WriteLine("Bestäm storleken (mellan 3-50) på ditt schackbräde.");
+            WelcomeMessage();
 
             while (!isInputValid)
             {
@@ -24,6 +20,14 @@
 
             ChessBoard board1 = new ChessBoard();
             board1.RenderBoard(size);
+        }
+
+        public static void WelcomeMessage()
+        {
+            Console.WriteLine($"{div}" +
+                $"\n Välkommen till vårat Schackbräde!" +
+                $"\n{div}" +
+                $"\nBestäm storleken (mellan 3-50) på ditt schackbräde.");
         }
 
         public static bool GetInput()
