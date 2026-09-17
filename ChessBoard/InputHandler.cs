@@ -6,5 +6,6 @@ namespace ChessBoard
 {
     public class InputHandler
     {
+        //för att få till en ny commit
     }
 }
