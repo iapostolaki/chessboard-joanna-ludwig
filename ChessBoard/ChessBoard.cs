@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using Spectre.Console;
 
 namespace ChessBoard
 {
@@ -14,8 +15,8 @@ namespace ChessBoard
         // Constructor
         public ChessBoard()
         {
-            WhiteSquare = "◼︎ ";
-            BlackSquare = "◻︎ ";
+            WhiteSquare = "[NavajoWhite1]◼︎ [/]";
+            BlackSquare = "[LightPink4]◼︎ [/]";
         }
 
         public void RenderBoard(int size) 
@@ -28,11 +29,11 @@ namespace ChessBoard
                     //If the sum of row and column is even, the square is white; otherwise, black.
                     if ((row + col) % 2 == 0)
                     {
-                        Console.Write(BlackSquare);
+                        AnsiConsole.Markup(BlackSquare);
                     }
                     else
                     {
-                        Console.Write(WhiteSquare);
+                        AnsiConsole.Markup(WhiteSquare);
                     }
                 }
                 // Make a new line
