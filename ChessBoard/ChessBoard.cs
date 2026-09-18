@@ -16,7 +16,7 @@ namespace ChessBoard
         public ChessBoard()
         {
             WhiteSquare = "[NavajoWhite1]◼︎ [/]";
-            BlackSquare = "[LightPink4]◼︎ [/]";
+            BlackSquare = "[LightPink4]◻︎ [/]";
         }
 
         public void RenderBoard(int size) 

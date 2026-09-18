@@ -1,4 +1,6 @@
-﻿namespace ChessBoard
+﻿using Spectre.Console;
+
+namespace ChessBoard
 {
     class Program
     {
@@ -42,13 +44,13 @@
                 }
                 else
                 {
-                    Console.WriteLine("Ogiltigt inmatning.");
+                    AnsiConsole.MarkupLine("[DarkRed_1]Ogiltigt inmatning.[/]");
                     return false;
                 }
             }
             else
             {
-                Console.WriteLine("Inmatningen måste vara ett tal.");
+                AnsiConsole.MarkupLine("[DarkRed_1]Inmatningen måste vara ett tal.[/]");
             }
 
             return false;
