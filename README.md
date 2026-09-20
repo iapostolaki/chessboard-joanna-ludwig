@@ -1,6 +1,6 @@
 # ChessBoard
 
-**Last updated:** `📆 2026-09-17`\
+**Last updated:** `📆 2026-09-20`\
 **Created:** `📆 2026-09-09`\
 **Author:** [`iapostolaki`](https://github.com/iapostolaki) [`etc-ludwig`](https://github.com/etc-ludwig)
 <!-- 
@@ -9,7 +9,7 @@
 -->
 
 ## About the project
-C# console application that renders a chessboard.
+C# console application that renders a chessboard based on user input.
 
 ## Dependencies
 ### Framework
@@ -60,7 +60,11 @@ Example **output**, a 6x6 chessboard in the terminal:
 ## Classes and methods
 * `Program`
   * `Main()`
+    * Main-method where the program starts and calls the other methods
   * `WelcomeMessage()`
+    * Prints the welcome message and rules to the user
   * `GetInput()`
+    * Asks the user for input and then validates it
 * `ChessBoard`
   * `RenderBoard()`
+    * Renders the board based on the size input
