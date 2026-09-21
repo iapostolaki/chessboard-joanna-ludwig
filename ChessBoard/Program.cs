@@ -27,7 +27,7 @@ namespace ChessBoard
         public static void WelcomeMessage()
         {
             Console.WriteLine($"{div}" +
-                $"\n Välkommen till Bygga Schackbräde!" +
+                $"\n Välkommen till ditt Schackbräde!" +
                 $"\n{div}" +
                 $"\nBestäm storleken (mellan 3-50) på ditt schackbräde.");
         }
