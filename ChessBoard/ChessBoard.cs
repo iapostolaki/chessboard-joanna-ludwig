@@ -8,7 +8,7 @@ namespace ChessBoard
 {
     public class ChessBoard
     {
-        // Properties for the black and white 
+        // Properties
         public string WhiteSquare { get; set; }
         public string BlackSquare { get; set; }
 
@@ -19,8 +19,10 @@ namespace ChessBoard
             BlackSquare = "[LightPink4]◻︎ [/]";
         }
 
-        public void RenderBoard(int size) 
+        public void RenderBoard(int size)
         {
+            AnsiConsole.MarkupLine("[LightGreen]Här är ditt schackbräde![/]\n");
+
             // Print the ChessBoard
             for (int row = 1; row <= size; row++)
             {

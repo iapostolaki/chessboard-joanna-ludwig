@@ -16,7 +16,7 @@ namespace ChessBoard
 
             while (!isInputValid)
             {
-                Console.Write("Ange ett tal: ");
+                Console.Write("Ange storlek: ");
                 isInputValid = GetInput();
             }
 
@@ -27,7 +27,7 @@ namespace ChessBoard
         public static void WelcomeMessage()
         {
             Console.WriteLine($"{div}" +
-                $"\n Välkommen till vårat Schackbräde!" +
+                $"\n Välkommen till Bygga Schackbräde!" +
                 $"\n{div}" +
                 $"\nBestäm storleken (mellan 3-50) på ditt schackbräde.");
         }
@@ -39,13 +39,12 @@ namespace ChessBoard
             {
                 // Verify that the size is within the allowed range
                 if (size >= 3 && size <= 50)
-                {
-                    AnsiConsole.MarkupLine("[LightGreen]Inmatning giltig![/]\n");
+                { 
                     return true;
                 }
                 else
                 {
-                    AnsiConsole.MarkupLine("[IndianRed1]Ogiltigt inmatning.[/]");
+                    AnsiConsole.MarkupLine("[IndianRed1]Talet är utanför intervallet.[/]");
                     return false;
                 }
             }
