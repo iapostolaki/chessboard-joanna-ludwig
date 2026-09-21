@@ -1,3 +1,5 @@
+[English](README.md) 
+
 # ChessBoard
 
 **Senast uppdaterad:** `📆 2026-09-21`\
