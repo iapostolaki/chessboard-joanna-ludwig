@@ -1,12 +1,10 @@
+[Svenska](README_sv.md)
+
 # ChessBoard
 
-**Last updated:** `📆 2026-09-20`\
+**Last updated:** `📆 2026-09-21`\
 **Created:** `📆 2026-09-09`\
 **Author:** [`iapostolaki`](https://github.com/iapostolaki) [`etc-ludwig`](https://github.com/etc-ludwig)
-<!-- 
-> [!WARNING]
-> README still under construction! 
--->
 
 ## About the project
 C# console application that renders a chessboard based on user input.
@@ -68,3 +66,9 @@ Example **output**, a 6x6 chessboard in the terminal:
 * `ChessBoard`
   * `RenderBoard()`
     * Renders the board based on the size input
+
+
+## Git workflow
+
+
+## Technical choices
