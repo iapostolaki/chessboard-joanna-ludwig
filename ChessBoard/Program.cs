@@ -40,17 +40,18 @@ namespace ChessBoard
                 // Verify that the size is within the allowed range
                 if (size >= 3 && size <= 50)
                 {
+                    AnsiConsole.MarkupLine("[LightGreen]Inmatning giltig![/]\n");
                     return true;
                 }
                 else
                 {
-                    AnsiConsole.MarkupLine("[DarkRed_1]Ogiltigt inmatning.[/]");
+                    AnsiConsole.MarkupLine("[IndianRed1]Ogiltigt inmatning.[/]");
                     return false;
                 }
             }
             else
             {
-                AnsiConsole.MarkupLine("[DarkRed_1]Inmatningen måste vara ett tal.[/]");
+                AnsiConsole.MarkupLine("[IndianRed1]Inmatningen måste vara ett tal mellan 3-50.[/]");
             }
 
             return false;
