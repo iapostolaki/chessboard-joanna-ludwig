@@ -29,11 +29,11 @@ namespace ChessBoard
                     //If the sum of row and column is even, the square is white; otherwise, black.
                     if ((row + col) % 2 == 0)
                     {
-                        AnsiConsole.Markup(BlackSquare);
+                        AnsiConsole.Markup(WhiteSquare);
                     }
                     else
                     {
-                        AnsiConsole.Markup(WhiteSquare);
+                        AnsiConsole.Markup(BlackSquare);
                     }
                 }
                 // Make a new line
