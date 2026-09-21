@@ -1,53 +1,48 @@
 # ChessBoard
 
-**Last updated:** `📆 2026-09-20`\
-**Created:** `📆 2026-09-09`\
-**Author:** [`iapostolaki`](https://github.com/iapostolaki) [`etc-ludwig`](https://github.com/etc-ludwig)
-<!-- 
-> [!WARNING]
-> README still under construction! 
--->
+**Senast uppdaterad:** `📆 2026-09-21`\
+**Skapad:** `📆 2026-09-09`\
+**Utvecklad av:** [`iapostolaki`](https://github.com/iapostolaki) [`etc-ludwig`](https://github.com/etc-ludwig)
 
-## About the project
-C# console application that renders a chessboard based on user input.
+## Om projektet
+C# konsolapplikation som ritar ut ett schackbräde i terminalen baserat på användarens inmatning.
+## Projektets beroenden
+### Ramverk
+* .NET 10.0 (eller nyare)
 
-## Dependencies
-### Framework
-* .NET 10.0 (or higher)
+### NuGet-paket
+* [Spectre.Console](https://www.nuget.org/packages/spectre.console) (v0.57.2) - Formaterad konsolutskrift i C#
 
-### NuGet Packages
-* [Spectre.Console](https://www.nuget.org/packages/spectre.console) (v0.57.2) - Formatted console output in C#
-
-## Local Setup
-### 1. Copy the URL
-Click `<>Code` on the top right and copy the HTTPS URL
+## Lokal installation
+### 1. Kopiera URL-länken
+Klicka på `<>Code` uppe till höger och kopiera HTTPS-länken
 ```
 https://github.com/iapostolaki/chessboard-joanna-ludwig.git
 ```
-### 2. Clone the repo 
-Open the terminal or Git Bash, navigate to the folder you want the repository to be cloned in and use:
+### 2. Klona repot
+Öppna terminalen eller Git Bash, gå till mappen där du vill spara repot och kör:
 ```
 git clone https://github.com/iapostolaki/chessboard-joanna-ludwig.git
 ```
-### 3. Step into the folder
+### 3. Gå till mappen
 ```
 cd .\ChessBoard\
 ```
-### 4. Build and run the program
+### 4. Bygg och kör programmet
 ```
 dotnet run ChessBoard.csproj
 ```
-For more information: [GitHub Docs: Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+För mer information: [GitHub Docs: Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-## Usage
-When you run the application you will be asked how big you want your chessboard to be (interval 3-50).
+## Användning
+När du kör programmet blir du tillfrågad om hur stort du vill att ditt schackbräde ska bli (intervall 3-50).
 
-Example **input**:
+Exempel på **inmatning**:
 ```
 6
 ```
 
-Example **output**, a 6x6 chessboard in the terminal:
+Exempel på **utskrift**, ett 6x6 schackbräde i terminalen: 
 ```
 ◻︎ ◼︎ ◻︎ ◼︎ ◻︎ ◼︎
 ◼︎ ◻︎ ◼︎ ◻︎ ◼︎ ◻︎
@@ -57,14 +52,19 @@ Example **output**, a 6x6 chessboard in the terminal:
 ◼︎ ◻︎ ◼︎ ◻︎ ◼︎ ◻︎
 ```
 
-## Classes and methods
+## Klasser och metoder 
 * `Program`
   * `Main()`
-    * Main-method where the program starts and calls the other methods
+    * Main-metoden där programmet startar och använder de andra metoderna
   * `WelcomeMessage()`
-    * Prints the welcome message and rules to the user
+    * Skriver ut välkomstmeddelandet och reglerna till användaren
   * `GetInput()`
-    * Asks the user for input and then validates it
+    * Frågar användaren efter inmatning och validerar det
 * `ChessBoard`
   * `RenderBoard()`
-    * Renders the board based on the size input
+    * Genererar schackbrädet baserat på användarens inmatning
+
+## Git-arbete
+
+
+## Tekniska val
