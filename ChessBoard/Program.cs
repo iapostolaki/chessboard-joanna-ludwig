@@ -6,12 +6,10 @@ namespace ChessBoard
     {
         public static int size = 0;
         public static string div = "-----------------------------------";
+        private static bool isInputValid = false;
 
         static void Main(string[] args)
         {
-            
-            bool isInputValid = false;
-
             WelcomeMessage();
 
             while (!isInputValid)
@@ -26,7 +24,8 @@ namespace ChessBoard
 
         public static void WelcomeMessage()
         {
-            Console.WriteLine($"{div}" +
+            Console.WriteLine(
+                $"{div}" +
                 $"\n Välkommen till Bygga Schackbräde!" +
                 $"\n{div}" +
                 $"\nBestäm storleken (mellan 3-50) på ditt schackbräde.");
@@ -34,7 +33,7 @@ namespace ChessBoard
 
         public static bool GetInput()
         {
-            // Verify that the input is valid integer
+            // Verify that the input is a valid integer
             if (int.TryParse(Console.ReadLine(), out size))
             {
                 // Verify that the size is within the allowed range
@@ -44,13 +43,13 @@ namespace ChessBoard
                 }
                 else
                 {
-                    AnsiConsole.MarkupLine("[IndianRed1]Talet är utanför intervallet.[/]");
+                    AnsiConsole.MarkupLine("[IndianRed1]Talet är utanför intervallet (mellan 3-50).[/]");
                     return false;
                 }
             }
             else
             {
-                AnsiConsole.MarkupLine("[IndianRed1]Inmatningen måste vara ett tal mellan 3-50.[/]");
+                AnsiConsole.MarkupLine("[IndianRed1]Inmatningen måste vara ett tal.[/]");
             }
 
             return false;
