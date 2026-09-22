@@ -46,12 +46,12 @@ Exempel på **inmatning**:
 
 Exempel på **utskrift**, ett 6x6 schackbräde i terminalen: 
 ```
-◻︎ ◼︎ ◻︎ ◼︎ ◻︎ ◼︎
 ◼︎ ◻︎ ◼︎ ◻︎ ◼︎ ◻︎
 ◻︎ ◼︎ ◻︎ ◼︎ ◻︎ ◼︎
 ◼︎ ◻︎ ◼︎ ◻︎ ◼︎ ◻︎
 ◻︎ ◼︎ ◻︎ ◼︎ ◻︎ ◼︎
 ◼︎ ◻︎ ◼︎ ◻︎ ◼︎ ◻︎
+◻︎ ◼︎ ◻︎ ◼︎ ◻︎ ◼︎
 ```
 
 ## Klasser och metoder 

@@ -47,12 +47,12 @@ Example **input**:
 
 Example **output**, a 6x6 chessboard in the terminal:
 ```
-◻︎ ◼︎ ◻︎ ◼︎ ◻︎ ◼︎
 ◼︎ ◻︎ ◼︎ ◻︎ ◼︎ ◻︎
 ◻︎ ◼︎ ◻︎ ◼︎ ◻︎ ◼︎
 ◼︎ ◻︎ ◼︎ ◻︎ ◼︎ ◻︎
 ◻︎ ◼︎ ◻︎ ◼︎ ◻︎ ◼︎
 ◼︎ ◻︎ ◼︎ ◻︎ ◼︎ ◻︎
+◻︎ ◼︎ ◻︎ ◼︎ ◻︎ ◼︎
 ```
 
 ## Classes and methods
