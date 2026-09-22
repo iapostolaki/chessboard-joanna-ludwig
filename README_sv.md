@@ -91,8 +91,8 @@ Vi har delat upp koden för att hålla `Main()` ren och lättöverskådlig:
 Eller
 
 **Uppdelning i metoder och klasser:**\
-Vi har delat upp koden enligt principen om ansvarsuppdelning (*Single Responsibility Principle*):\
-* **`Program`** ansvarar för applikationens startflöde, välkomstmeddelande(`WelcomeMessage()`) och hantering/validering av användarinput (`GetInput()`).\
+Vi har delat upp koden enligt principen om ansvarsuppdelning (*Single Responsibility Principle*):
+* **`Program`** ansvarar för applikationens startflöde, välkomstmeddelande(`WelcomeMessage()`) och hantering/validering av användarinput (`GetInput()`).
 * **`ChessBoard`** ansvarar helt för brädets tillstånd och visning. Brädets rutor/utseende initieras i klassens kontruktor, medan `RenderBoard()` sköter själva utskriftslogiken.
 
 
