@@ -15,7 +15,7 @@ namespace ChessBoard
             while (!isInputValid)
             {
                 Console.Write("Ange storlek: ");
-                isInputValid = GetInput();
+                isInputValid = ValidateInput();
             }
 
             ChessBoard board1 = new ChessBoard();
@@ -31,7 +31,7 @@ namespace ChessBoard
                 $"\nBestäm storleken (mellan 3-50) på ditt schackbräde.");
         }
 
-        public static bool GetInput()
+        public static bool ValidateInput()
         {
             // Verify that the input is a valid integer
             if (int.TryParse(Console.ReadLine(), out size))
