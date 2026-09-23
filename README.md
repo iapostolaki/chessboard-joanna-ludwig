@@ -70,24 +70,24 @@ Example **output**, a 6x6 chessboard in the terminal:
 ## Git workflow and merge conflicts
 In our project, we have worked with Git for version management and to be able to resolve conflicts in a structured way.
 
-**Commits:** We have made regular and clear commits with descriptive messages for each completed subtask, function or change.
+- ### Commits
+  We have made regular and clear commits with descriptive messages for each completed subtask, function or change.
 
-**Communication and Pulls:** During the project, we have had continuous dialogue and screen sharing to check before we posted new changes with `git push`. We made sure to always do a `git pull` before we started working to have the latest version of the code.
+- ### Communication and Pulls
+  During the project, we have had continuous dialogue and screen sharing to check before we posted new changes with `git push`. We made sure to always do a `git pull` before we started working to have the latest version of the code.
 
-**Merge conflicts:** When a conflict arose in the `main` branch, we went through the overlapping files together, chose which change suited our project best and resolved the conflicts manually before completing the merge.
+- ### Merge conflicts
+  When there was a merge conflict in the `main` branch, we went through the overlapping files together, chose which change suited our project best and resolved the conflicts manually before completing the merge.
 
-## Technical Choices
+## Technical choices
 
-**Input Validation:** \
-In the `ValidateInput()` method, we use `int.TryParse()` to safely convert the user's input to integers without crashing the program if invalid characters are entered. We then validate that the number is within the allowed range (3-50). In case of invalid input, we use *Spectre.Console* to display a color-coded and clear error message, and a `while` loop in `Main()` lets the user try again until valid input is given.
+- ### Input Validation
+  In the `ValidateInput()` method, we use `int.TryParse()` to safely convert the user's input to an integer without crashing the program if invalid characters are entered. We then validate that the number is within the allowed range (3-50). In case of invalid input, we use *Spectre.Console* to display a color-coded and clear error message, and a `while` loop in `Main()` lets the user try again until valid input is given.
 
-**Alternating between black and white squares:**\
-The alternation is calculated for each square in the `RenderBoard()` method by checking whether the sum of the current row and column is even or odd using modulo calculation (`(row + col) % 2 == 0`). If the sum is even, a white square is drawn, otherwise a black one. This gives a perfect checkerboard pattern regardless of the size the user chooses.
+- ### Alternating between black and white squares
+  The alternation is calculated for each square in the `RenderBoard()` method by checking whether the sum of the current row and the current column is odd or even using modulo calculation (`(row + col) % 2 == 0`). If the sum is even, a white square is printed, otherwise a black one. This gives a perfect checkerboard pattern regardless of the size the user chooses.
 
-**Divided into methods and classes:**\
-We have divided the code according to the Single Responsibility Principle:
-* `WelcomeMessage()` and `ValidateInput()` handle the user interface and input separately in `Program`.
-* The game board itself and its printing logic have been moved to a separate class `ChessBoard` according to the Single Responsibility Principle.
-
-> [!WARNING]
-> Här tar engelska slut
+- ### Divided into methods and classes
+  We have divided the code according to the *Single Responsibility Principle*:
+  * `WelcomeMessage()` and `ValidateInput()` handle the user interface and input separately in `Program`.
+  * The game board itself and its printing logic have been moved to a separate class `ChessBoard` according to the Single Responsibility Principle.
