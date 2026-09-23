@@ -60,7 +60,7 @@ Exempel på **utskrift**, ett 6x6 schackbräde i terminalen:
     * Main-metoden där programmet startar och använder de andra metoderna
   * `WelcomeMessage()`
     * Skriver ut välkomstmeddelandet och reglerna till användaren
-  * `GetInput()`
+  * `ValidateInput()`
     * Frågar användaren efter inmatning och validerar det
 * `ChessBoard`
   * `RenderBoard()`
@@ -78,21 +78,21 @@ I projektet har vi arbetat med ett strukturerat Git-arbetsflöde för att hålla
 ## Tekniska val
 
 **Inputvalidering:** \
-I medtoden `GetInput()` använder vi `int.TryParse()` för att säkert omvandla användarens inmatning till heltal utan att krascha programmet om felaktiga tecken skrivs in. Därefter validerar vi att antalet ligger inom det tillåtna intervallet (3-50). Vid felaktig input använder vi *Spectre.Console* för att visa ett färgkodat och tydligt felmeddelande, och en `while'loop` i `Main()` låter användaren försöka igen tills giltig inputs ges.
+I medtoden `ValidateInput()` använder vi `int.TryParse()` för att säkert omvandla användarens inmatning till heltal utan att krascha programmet om felaktiga tecken skrivs in. Därefter validerar vi att antalet ligger inom det tillåtna intervallet (3-50). Vid felaktig input använder vi *Spectre.Console* för att visa ett färgkodat och tydligt felmeddelande, och en `while`-loop i `Main()` låter användaren försöka igen tills giltig inputs ges.
 
 **Växling mellan svara och vita rutor:**\
 Växlingen beräknas för varje ruta i  `RenderBoard()`-metoden genom att kontrollera om summan av aktuell rad och kolumn är jämn eller udda (`(row + col) % 2 == 0`). Om summan är jämn ritas en vit ruta ut, annars en svart. Detta ger ett perfekt schackmönster oavsett vilken storlek användaren väljer.
 
 **Uppdelning i metoder och klasser:**\
 Vi har delat upp koden för att hålla `Main()` ren och lättöverskådlig:
-* `WelcomeMessage()` och `GetInput()` hanterar användargränssnittet och inläsningen separat i `Program`.
+* `WelcomeMessage()` och `ValidateInput()` hanterar användargränssnittet och inläsningen separat i `Program`.
 * Själva spelbrädet och dess utskriftslogik har flyttas till en egen klass `ChessBoard` enligt principen om ansvarsuppdelning(*Single Responsibility Principle*).
 
 Eller
 
 **Uppdelning i metoder och klasser:**\
 Vi har delat upp koden enligt principen om ansvarsuppdelning (*Single Responsibility Principle*):
-* **`Program`** ansvarar för applikationens startflöde, välkomstmeddelande(`WelcomeMessage()`) och hantering/validering av användarinput (`GetInput()`).
+* **`Program`** ansvarar för applikationens startflöde, välkomstmeddelande(`WelcomeMessage()`) och hantering/validering av användarinput (`ValidateInput()`).
 * **`ChessBoard`** ansvarar helt för brädets tillstånd och visning. Brädets rutor/utseende initieras i klassens kontruktor, medan `RenderBoard()` sköter själva utskriftslogiken.
 
 

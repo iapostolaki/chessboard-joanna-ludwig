@@ -61,7 +61,7 @@ Example **output**, a 6x6 chessboard in the terminal:
     * Main-method where the program starts and calls the other methods
   * `WelcomeMessage()`
     * Prints the welcome message and rules to the user
-  * `GetInput()`
+  * `ValidateInput()`
     * Asks the user for input and then validates it
 * `ChessBoard`
   * `RenderBoard()`
