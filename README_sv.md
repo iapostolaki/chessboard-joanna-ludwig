@@ -66,33 +66,24 @@ Exempel på **utskrift**, ett 6x6 schackbräde i terminalen:
   * `RenderBoard()`
     * Genererar schackbrädet baserat på användarens inmatning
 
-## Git-arbetsflöde och Merge Conflicts
-I projektet har vi arbetat med ett strukturerat Git-arbetsflöde för att hålla koden organiserad och undvika konfliktfrågor.
+## Git-arbetsflöde och merge-konflikter
+I projektet har vi arbetat med ett strukturerat Git-arbetsflöde för att versionshantering och strukturerat lösa konflikter.
 
 **Commits:** Vi har gjort regelbundna och tydliga commmits med beskrivande meddelanden för varje avslutad deluppgift, funktion eller ändring.
 
-**Kommunikation och Pulls:** För att undvika att skriva över varandras kod stämde vi av i gruppen innan vi pushade nya ändringar. Vi såg till att alltid göra en `git pull` innan vi började arbeta för att ha den senaste koden.
+**Kommunikation och Pulls:** Vi har under projektets gång haft kontinuerlig dialog och skärmdelat för att stämma av innan vi lagt upp nya ändringar med `git push`. Vi såg till att alltid göra en `git pull` innan vi började arbeta för att ha den senaste versionen av koden.
 
-**Merge Conflicts:** När konflikt uppstod direkt i `main` gick vi igenom de överlappade filerna tillsammans, valde vilken ändring vi ville ha i våran kod och löste konflikterna manuellt innan vi slutförde mergen.
+**Merge-konflikter:** När konflikt uppstod i `main`-grenen gick vi igenom de överlappade filerna tillsammans, valde vilken ändring som passade vårat projekt bäst och löste konflikterna manuellt innan vi slutförde mergen.
 
 ## Tekniska val
 
 **Inputvalidering:** \
-I medtoden `ValidateInput()` använder vi `int.TryParse()` för att säkert omvandla användarens inmatning till heltal utan att krascha programmet om felaktiga tecken skrivs in. Därefter validerar vi att antalet ligger inom det tillåtna intervallet (3-50). Vid felaktig input använder vi *Spectre.Console* för att visa ett färgkodat och tydligt felmeddelande, och en `while`-loop i `Main()` låter användaren försöka igen tills giltig inputs ges.
+I metoden `ValidateInput()` använder vi `int.TryParse()` för att säkert omvandla användarens inmatning till heltal utan att krascha programmet om felaktiga tecken skrivs in. Därefter validerar vi att antalet ligger inom det tillåtna intervallet (3-50). Vid felaktig inmatning använder vi *Spectre.Console* för att visa ett färgkodat och tydligt felmeddelande, och en `while`-loop i `Main()` låter användaren försöka igen tills giltig inmatning ges.
 
-**Växling mellan svara och vita rutor:**\
-Växlingen beräknas för varje ruta i  `RenderBoard()`-metoden genom att kontrollera om summan av aktuell rad och kolumn är jämn eller udda (`(row + col) % 2 == 0`). Om summan är jämn ritas en vit ruta ut, annars en svart. Detta ger ett perfekt schackmönster oavsett vilken storlek användaren väljer.
-
-**Uppdelning i metoder och klasser:**\
-Vi har delat upp koden för att hålla `Main()` ren och lättöverskådlig:
-* `WelcomeMessage()` och `ValidateInput()` hanterar användargränssnittet och inläsningen separat i `Program`.
-* Själva spelbrädet och dess utskriftslogik har flyttas till en egen klass `ChessBoard` enligt principen om ansvarsuppdelning(*Single Responsibility Principle*).
-
-Eller
+**Växling mellan svarta och vita rutor:**\
+Växlingen beräknas för varje ruta i  `RenderBoard()`-metoden genom att kontrollera om summan av aktuell rad och kolumn är jämn eller udda med hjälp av moduloräkning (`(row + col) % 2 == 0`). Om summan är jämn ritas en vit ruta ut, annars en svart. Detta ger ett perfekt schackmönster oavsett vilken storlek användaren väljer.
 
 **Uppdelning i metoder och klasser:**\
 Vi har delat upp koden enligt principen om ansvarsuppdelning (*Single Responsibility Principle*):
-* **`Program`** ansvarar för applikationens startflöde, välkomstmeddelande(`WelcomeMessage()`) och hantering/validering av användarinput (`ValidateInput()`).
-* **`ChessBoard`** ansvarar helt för brädets tillstånd och visning. Brädets rutor/utseende initieras i klassens kontruktor, medan `RenderBoard()` sköter själva utskriftslogiken.
-
-
+* `WelcomeMessage()` och `ValidateInput()` hanterar användargränssnittet och inläsningen separat i `Program`.
+* Själva spelbrädet och dess utskriftslogik har flyttas till en egen klass `ChessBoard` enligt principen om ansvarsuppdelning (*Single Responsibility Principle*).
