@@ -70,24 +70,24 @@ Exempel på **utskrift**, ett 6x6 schackbräde i terminalen:
 ## Git-arbetsflöde och merge-konflikter
 I vårat projektet har vi arbetat med Git för versionshantering och för att kunna lösa konflikter på ett strukturerat sätt. 
 
-- ### Commits
-  Vi har gjort regelbundna och tydliga commmits med beskrivande meddelanden för varje avslutad deluppgift, funktion eller ändring.
+### Commits
+Vi har gjort regelbundna och tydliga commmits med beskrivande meddelanden för varje avslutad deluppgift, funktion eller ändring.
 
-- ### Kommunikation och Pulls
-  Vi har under projektets gång haft kontinuerlig dialog och skärmdelat för att stämma av innan vi lagt upp nya ändringar med `git push`. Vi såg till att alltid göra en `git pull` innan vi började arbeta för att ha den senaste versionen av koden.
+### Kommunikation och Pulls
+Vi har under projektets gång haft kontinuerlig dialog och skärmdelat för att stämma av innan vi lagt upp nya ändringar med `git push`. Vi såg till att alltid göra en `git pull` innan vi började arbeta för att ha den senaste versionen av koden.
 
-- ### Merge-konflikter
-   När konflikt uppstod i `main`-grenen gick vi igenom de överlappade filerna tillsammans, valde vilken ändring som passade vårat projekt bäst och löste konflikterna manuellt innan vi slutförde mergen.
+### Merge-konflikter
+När konflikt uppstod i `main`-grenen gick vi igenom de överlappade filerna tillsammans, valde vilken ändring som passade vårat projekt bäst och löste konflikterna manuellt innan vi slutförde mergen.
 
 ## Tekniska val
 
-- ### Inputvalidering
-  I metoden `ValidateInput()` använder vi `int.TryParse()` för att säkert omvandla användarens inmatning till ett heltal utan att krascha programmet om felaktiga tecken skrivs in. Därefter validerar vi att talet ligger inom det tillåtna intervallet (3-50). Vid felaktig inmatning använder vi *Spectre.Console* för att visa ett färgkodat och tydligt felmeddelande, och en `while`-loop i `Main()` låter användaren försöka igen tills giltig inmatning ges.
+### Inputvalidering
+I metoden `ValidateInput()` använder vi `int.TryParse()` för att säkert omvandla användarens inmatning till ett heltal utan att krascha programmet om felaktiga tecken skrivs in. Därefter validerar vi att talet ligger inom det tillåtna intervallet (3-50). Vid felaktig inmatning använder vi *Spectre.Console* för att visa ett färgkodat och tydligt felmeddelande, och en `while`-loop i `Main()` låter användaren försöka igen tills giltig inmatning ges.
 
-- ### Växling mellan svarta och vita rutor
-  Växlingen beräknas för varje ruta i `RenderBoard()`-metoden genom att kontrollera om summan av aktuell rad och aktuell kolumn är jämn eller udda med hjälp av moduloräkning (`(row + col) % 2 == 0`). Om summan är jämn ritas en vit ruta ut, annars en svart. Detta ger ett perfekt schackmönster oavsett vilken storlek användaren väljer.
+### Växling mellan svarta och vita rutor
+Växlingen beräknas för varje ruta i `RenderBoard()`-metoden genom att kontrollera om summan av aktuell rad och aktuell kolumn är jämn eller udda med hjälp av moduloräkning (`(row + col) % 2 == 0`). Om summan är jämn ritas en vit ruta ut, annars en svart. Detta ger ett perfekt schackmönster oavsett vilken storlek användaren väljer.
 
-- ### Uppdelning i metoder och klasser
-  Vi har delat upp koden enligt principen om ansvarsuppdelning (*Single Responsibility Principle*):
-  * `WelcomeMessage()` och `ValidateInput()` hanterar användargränssnittet och inläsningen separat i `Program`.
-  * Själva spelbrädet och dess utskriftslogik har flyttas till en egen klass `ChessBoard` enligt principen om ansvarsuppdelning (*Single Responsibility Principle*).
+### Uppdelning i metoder och klasser
+Vi har delat upp koden enligt principen om ansvarsuppdelning (*Single Responsibility Principle*):
+* `WelcomeMessage()` och `ValidateInput()` hanterar användargränssnittet och inläsningen separat i `Program`.
+* Själva spelbrädet och dess utskriftslogik har flyttas till en egen klass `ChessBoard` enligt principen om ansvarsuppdelning (*Single Responsibility Principle*).
