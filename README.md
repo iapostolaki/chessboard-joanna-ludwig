@@ -2,7 +2,7 @@
 
 # ChessBoard
 
-**Last updated:** `📆 2026-09-21`\
+**Last updated:** `📆 2026-09-23`\
 **Created:** `📆 2026-09-09`\
 **Author:** [`iapostolaki`](https://github.com/iapostolaki) [`etc-ludwig`](https://github.com/etc-ludwig)
 
@@ -65,10 +65,29 @@ Example **output**, a 6x6 chessboard in the terminal:
     * Asks the user for input and then validates it
 * `ChessBoard`
   * `RenderBoard()`
-    * Renders the board based on the size input
+    * Renders the chessboard based on the size input
 
+## Git workflow and merge conflicts
+In our project, we have worked with Git for version management and to be able to resolve conflicts in a structured way.
 
-## Git workflow
+**Commits:** We have made regular and clear commits with descriptive messages for each completed subtask, function or change.
 
+**Communication and Pulls:** During the project, we have had continuous dialogue and screen sharing to check before we posted new changes with `git push`. We made sure to always do a `git pull` before we started working to have the latest version of the code.
 
-## Technical choices
+**Merge conflicts:** When a conflict arose in the `main` branch, we went through the overlapping files together, chose which change suited our project best and resolved the conflicts manually before completing the merge.
+
+## Technical Choices
+
+**Input Validation:** \
+In the `ValidateInput()` method, we use `int.TryParse()` to safely convert the user's input to integers without crashing the program if invalid characters are entered. We then validate that the number is within the allowed range (3-50). In case of invalid input, we use *Spectre.Console* to display a color-coded and clear error message, and a `while` loop in `Main()` lets the user try again until valid input is given.
+
+**Alternating between black and white squares:**\
+The alternation is calculated for each square in the `RenderBoard()` method by checking whether the sum of the current row and column is even or odd using modulo calculation (`(row + col) % 2 == 0`). If the sum is even, a white square is drawn, otherwise a black one. This gives a perfect checkerboard pattern regardless of the size the user chooses.
+
+**Divided into methods and classes:**\
+We have divided the code according to the Single Responsibility Principle:
+* `WelcomeMessage()` and `ValidateInput()` handle the user interface and input separately in `Program`.
+* The game board itself and its printing logic have been moved to a separate class `ChessBoard` according to the Single Responsibility Principle.
+
+> [!WARNING]
+> Här tar engelska slut

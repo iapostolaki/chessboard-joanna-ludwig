@@ -2,7 +2,7 @@
 
 # ChessBoard
 
-**Senast uppdaterad:** `📆 2026-09-22`\
+**Senast uppdaterad:** `📆 2026-09-23`\
 **Skapad:** `📆 2026-09-09`\
 **Utvecklad av:** [`iapostolaki`](https://github.com/iapostolaki) [`etc-ludwig`](https://github.com/etc-ludwig)
 
@@ -67,7 +67,7 @@ Exempel på **utskrift**, ett 6x6 schackbräde i terminalen:
     * Genererar schackbrädet baserat på användarens inmatning
 
 ## Git-arbetsflöde och merge-konflikter
-I projektet har vi arbetat med ett strukturerat Git-arbetsflöde för att versionshantering och strukturerat lösa konflikter.
+I vårat projektet har vi arbetat med Git för versionshantering och för att kunna lösa konflikter på ett strukturerat sätt. 
 
 **Commits:** Vi har gjort regelbundna och tydliga commmits med beskrivande meddelanden för varje avslutad deluppgift, funktion eller ändring.
 
