@@ -18,6 +18,9 @@ namespace ChessBoard
                 isInputValid = ValidateInput();
             }
 
+            // Prevents squares from rendering as questionmarks
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+
             ChessBoard board1 = new ChessBoard();
             board1.RenderBoard(size);
         }
