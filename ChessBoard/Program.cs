@@ -10,6 +10,9 @@ namespace ChessBoard
 
         static void Main(string[] args)
         {
+            // Prevents squares from rendering as questionmarks
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+
             WelcomeMessage();
 
             while (!isInputValid)
@@ -17,9 +20,6 @@ namespace ChessBoard
                 Console.Write("Ange storlek: ");
                 isInputValid = ValidateInput();
             }
-
-            // Prevents squares from rendering as questionmarks
-            Console.OutputEncoding = System.Text.Encoding.Unicode;
 
             ChessBoard board1 = new ChessBoard();
             board1.RenderBoard(size);
